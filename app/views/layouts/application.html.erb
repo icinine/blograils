@@ -12,7 +12,8 @@
 </head>
 <body>
 <header id="main_navigation" class="clearfix">
-			<a href="#" class="name">Shane Carr </a>
+  <%= link_to "Shane Carr", root_path, class:"name" %>
+			
 			<nav>
         <%= link_to "Articles", posts_path %>
 				<a href="#">Projects</a>
@@ -20,6 +21,18 @@
 			</nav>
 		</header>
 <%= yield %>
+  
+  <footer id="main_footer">
+		<p class="copyright">&copy; Shane Carr 2016</p>
+	<nav>
+		<a href="#"><i class="fa fa-twitter"></i>
+</a>
+		<a href="#"><i class="fa fa-github"></i>
+</a>
+		<a href="#"><i class="fa fa-dribble"></i>
+</a>
+	</nav>
+	</footer>
 
 </body>
 </html>

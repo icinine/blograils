@@ -1,0 +1,28 @@
+<div class="wrapper wrapper-padding clearfix">
+		<div class="col-1 homepage_content">
+			<h2>About</h2>
+			<hr>
+			<p>Bacon ipsum dolor amet shank pancetta pork loin frankfurter. Pork chicken 		pork 			loin chuck sirloin tenderloin biltong venison shankle landjaeger. Venison tail tongue cupim turducken ground round beef tenderloin corned beef beef ribs.</p> <p>Shank fatback shankle kevin pancetta rump short loin filet mignon porchetta tri-tip prosciutto ribeye cupim kielbasa. Tenderloin brisket ground round <a href="#">jerky picanha</a> tri-tip chicken.</p>
+
+<p>Pork belly ham hock frankfurter, meatball tri-tip andouille salami rump jowl shank kielbasa cow. T-bone chuck ribeye pork pork loin. Kevin t-bone picanha frankfurter cow. Fatback salami porchetta swine pork belly. </p>
+		</div>
+		<div class="col-2 homepage_content">
+		<h2>Stuff I've Written</h2>
+		<hr>
+      <% @posts.each do |post| %>
+      <h3><a href="#"><%= link_to post.title, post %></a></h3>
+      <p class="date"><%= post.created_at.strftime("%A, %b, %d") %></p>
+      <% end %>
+		
+		</div>
+		<div class="col-3 homepage_content">
+			<h2>Stuff I've Built</h2>
+		<hr>
+		<h3><a href="#">Think Contemporary</a></h3>
+		<p class="date">Friday, 1st February, 2016</p>
+		<h3><a href="#">The Suite Music</a></h3>
+		<p class="date">Friday, 1st February, 2016</p>
+		<h3><a href="#">Workout App</a></h3>
+		<p class="date">Friday, 1st February, 2016</p>
+		</div>
+	</div>
