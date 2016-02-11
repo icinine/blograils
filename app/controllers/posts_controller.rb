@@ -2,7 +2,7 @@ class PostsController < ApplicationController
   before_action :find_post, only: [:show, :edit, :update, :destroy]
   
   def index
-    
+    @posts = Post.all.order("created_at desc").paginate(page: params[:page], per_page: 3)
   end
   
   
@@ -11,7 +11,7 @@ class PostsController < ApplicationController
   end
   
   def create
-    @post = Post.new(post_params)
+    @post = Post.new post_params
     if @post.save
       flash[:success]="Post Saved Successfully"
       redirect_to @post
